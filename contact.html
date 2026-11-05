@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f7f1e8">
+    <meta name="description" content="Contact & Order Enquiry | Momos & Chinese Fast Food Stall">
+    <title>Contact & Order Enquiry | Momos & Chinese Fast Food Stall</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body class="inner-page" id="top">
+    <header class="site-header">
+        <div class="top-strip">
+            <div class="container top-inner"><span>Freshly folded. Beautifully served.</span><span>Steamed • Fried •
+                    Full of flavour</span></div>
+        </div>
+        <div class="container nav-wrap">
+            <a class="brand" href="index.html"><img class="brand-logo" src="assets/momos-logo.svg"
+                    alt="Momos & Chinese logo"><span><b>MOMOS</b><small>& CHINESE FAST FOOD</small></span></a>
+            <button class="menu-toggle" aria-label="Open navigation"
+                aria-expanded="false"><i></i><i></i><i></i></button>
+            <nav class="main-nav"><a href="index.html" class="">Home 1</a><a href="home-2.html" class="">Home 2</a><a
+                    href="about.html" class="">About</a><a href="services.html" class="">Services</a><a href="menu.html"
+                    class="">Menu</a><a href="combos.html" class="">Combo Deals</a><a href="contact.html"
+                    class="active">Contact</a>
+                <div class="nav-tools"><button class="tool-btn" id="themeToggle" type="button"
+                        aria-label="Toggle dark theme">◐ <span>Theme</span></button><button class="tool-btn"
+                        id="rtlToggle" type="button" aria-label="Toggle RTL layout">⇄ <span>RTL</span></button></div><a
+                    class="nav-order" href="contact.html#order-form">Order enquiry <span> </span></a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="page-hero contact-hero">
+            <div class="page-hero-bg" style="background-image:url('assets/images/food-17.jpg')"></div>
+            <div class="page-hero-overlay"></div>
+            <div class="container page-hero-content"><span class="eyebrow light">SAY HELLO</span>
+                <h1>Let's talk <em>food.</em></h1>
+                <p>Questions, group orders or a special craving? Send us an enquiry.</p>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container contact-layout">
+                <div class="contact-copy"><span class="eyebrow">GET IN TOUCH</span>
+                    <h2>Tell us what<br>you're <em>craving.</em></h2>
+                    <p>Use the enquiry form to share the dishes, quantities and preferred time. The stall's verified
+                        address, phone number and opening hours can be added here before launch.</p>
+                    <div class="contact-info">
+                        <div><b>ORDER ENQUIRIES</b><span>Use the form and include your preferred contact details.</span>
+                        </div>
+                        <div><b>LOCATION & HOURS</b><span>Update with the stall's confirmed location and business
+                                hours.</span></div>
+                    </div><img src="assets/images/food-17.jpg" alt="Momos with dipping sauces ready to enjoy">
+                </div>
+                <form class="order-form" id="order-form"><span class="eyebrow">ORDER ENQUIRY</span>
+                    <h3>What can we prepare for you?</h3><label>Your name<input name="name" required
+                            placeholder="Enter your name"></label>
+                    <div class="form-row"><label>Phone number<input name="phone" type="tel" required
+                                placeholder="Your contact number"></label><label>Preferred date<input name="date"
+                                type="date"></label></div><label>Dish / combo<select name="item" id="itemSelect">
+                            <option value="">Choose a dish</option>
+                            <option>Steamed vegetable momos</option>
+                            <option>Crispy fried momos</option>
+                            <option>Tandoori-style momos</option>
+                            <option>Veg Hakka noodles</option>
+                            <option>Vegetable fried rice</option>
+                            <option>Momo party plate</option>
+                            <option>Momo + wok combo</option>
+                            <option>Chinese feast box</option>
+                            <option>Other / custom order</option>
+                        </select></label>
+                    <div class="form-row"><label>Quantity<input name="quantity" type="number" min="1" value="1"
+                                required></label><label>Enquiry type<select name="type">
+                                <option>Pickup enquiry</option>
+                                <option>Group order</option>
+                                <option>Menu question</option>
+                                <option>Other</option>
+                            </select></label></div><label>Message<textarea name="message" rows="4"
+                            placeholder="Tell us about your order or any special request"></textarea></label><button
+                        class="btn btn-primary form-submit" type="submit">Prepare enquiry <span> </span></button>
+                    <p class="form-note">Demo form: it prepares a formatted enquiry for you to copy. No order is sent
+                        until you share it with the stall.</p>
+                    <div class="form-result" id="formResult" aria-live="polite" hidden><b>Your enquiry is
+                            ready.</b><textarea id="enquiryOutput" readonly rows="6"></textarea><button type="button"
+                            class="btn btn-dark" id="copyEnquiry">Copy enquiry</button><span id="copyStatus"></span>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="section location-section">
+            <div class="container">
+                <div class="section-head">
+                    <div><span class="eyebrow">FIND YOUR FOOD STOP</span>
+                        <h2>Come by for a <em>good bite.</em></h2>
+                    </div>
+                    <p class="section-note">Map preview is a general search for the stall name in Hyderabad. Replace it
+                        with the verified business address and exact map pin before publishing.</p>
+                </div>
+                <div class="map-panel">
+                    <div class="map-frame"><iframe title="Map search for Momos and Chinese fast food in Hyderabad"
+                            src="https://maps.google.com/maps?q=Momos%20Chinese%20Fast%20Food%20Stall%20Hyderabad&t=&z=12&ie=UTF8&iwloc=&output=embed"
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
+                    <div class="map-caption"><span class="map-pin">⌖</span>
+                        <div><b>Location details to be confirmed</b>
+                            <p>Add the stall's exact street address, opening hours and contact number here.</p><a
+                                class="btn btn-outline"
+                                href="https://www.google.com/maps/search/?api=1&query=Momos+Chinese+Fast+Food+Stall+Hyderabad"
+                                target="_blank" rel="noopener">Open map search</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand"><a class="brand" href="index.html"><img class="brand-logo"
+                        src="assets/momos-logo.svg" alt="Momos & Chinese logo"><span><b>MOMOS</b><small>& CHINESE FAST
+                            FOOD</small></span></a>
+                <p>Hot momos, bold sauces and wok-tossed favourites. Made fresh, served with a little extra joy.</p>
+                <div class="footer-social" aria-label="Social media links"><a href="https://www.instagram.com/"
+                        target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24"
+                            aria-hidden="true">
+                            <rect x="3" y="3" width="18" height="18" rx="5" />
+                            <circle cx="12" cy="12" r="4" />
+                            <circle cx="17.5" cy="6.5" r="1" />
+                        </svg></a><a href="https://www.facebook.com/" target="_blank" rel="noopener"
+                        aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M14 21v-8h3l.5-4H14V7c0-1.2.4-2 2-2h2V1.4C17.2 1.2 16.1 1 14.7 1 11.5 1 9.5 3 9.5 6.6V9H6v4h3.5v8z" />
+                        </svg></a><a href="https://wa.me/" target="_blank" rel="noopener" aria-label="WhatsApp"
+                        title="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path
+                                d="M20.5 3.5A11 11 0 0 0 3.2 16.8L2 22l5.4-1.4A11 11 0 0 0 20.5 3.5ZM12 20a8 8 0 0 1-4.1-1.1l-.3-.2-3.2.8.9-3.1-.2-.3A8 8 0 1 1 12 20Zm4.4-6c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1-.6.8-.8.9-.3.2-.5.1a6.5 6.5 0 0 1-1.9-1.2 7 7 0 0 1-1.3-1.6c-.1-.2 0-.3.1-.4l.4-.5c.1-.1.2-.3.2-.4s0-.3-.1-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3s-.8.8-.8 1.9.8 2.2.9 2.3a9.7 9.7 0 0 0 3.7 3.3c.5.2.9.4 1.2.5.5.2 1 .2 1.4.1.4-.1 1.4-.6 1.6-1.1s.2-1 .1-1.1-.2-.2-.4-.3Z" />
+                        </svg></a></div>
+            </div>
+            <div>
+                <h4>Explore</h4><a href="index.html">Home 1</a><a href="home-2.html">Home 2</a><a href="about.html">Our
+                    story</a><a href="services.html">Services</a>
+            </div>
+            <div>
+                <h4>Good food</h4><a href="menu.html">Full menu</a><a href="combos.html">Combo deals</a><a
+                    href="contact.html">Order enquiry</a>
+            </div>
+            <div>
+                <h4>Visit / Contact</h4>
+                <p>Freshly prepared, made to order.</p><a href="contact.html#order-form">Send an enquiry ↗</a>
+                <p class="footer-note">Add your verified address and phone number before publishing.</p>
+            </div>
+        </div>
+        <div class="container footer-bottom"><span>© <span id="year"></span> Momos & Chinese Fast Food Stall</span><a
+                href="#top">Back to top ↑</a></div>
+    </footer>
+    <script src="assets/site.js"></script>
+</body>
+
+</html>
