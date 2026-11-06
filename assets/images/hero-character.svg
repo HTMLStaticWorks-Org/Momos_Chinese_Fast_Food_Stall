@@ -1,0 +1,257 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 280" class="hero-pull-svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+  <defs>
+    <style>
+      /* Embedded animations for seamless rendering anywhere */
+      @keyframes charTug {
+        0%, 100% {
+          transform: translate(0px, 0px) rotate(0deg);
+        }
+        50% {
+          transform: translate(-3px, -2px) rotate(-1.8deg);
+        }
+      }
+      @keyframes steamPuff1 {
+        0% {
+          opacity: 0.2;
+          transform: translateY(0px) scale(0.9);
+        }
+        50% {
+          opacity: 0.9;
+          transform: translateY(-8px) scale(1.05);
+        }
+        100% {
+          opacity: 0;
+          transform: translateY(-18px) scale(1.15);
+        }
+      }
+      @keyframes steamPuff2 {
+        0% {
+          opacity: 0.15;
+          transform: translateY(0px) scale(0.85);
+        }
+        50% {
+          opacity: 0.85;
+          transform: translateY(-10px) scale(1.02);
+        }
+        100% {
+          opacity: 0;
+          transform: translateY(-22px) scale(1.2);
+        }
+      }
+      @keyframes momoJoy {
+        0%, 100% {
+          transform: translate(0px, 0px) scale(1);
+        }
+        50% {
+          transform: translate(1px, -3px) scale(1.03);
+        }
+      }
+      @keyframes ropeStretch {
+        0%, 100% {
+          stroke-dashoffset: 0;
+        }
+        50% {
+          stroke-dashoffset: 6;
+        }
+      }
+      @keyframes sparklePulse {
+        0%, 100% {
+          opacity: 0.4;
+          transform: scale(0.85);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1.15);
+        }
+      }
+
+      .pulling-character {
+        transform-origin: 100px 225px;
+        animation: charTug 3.8s ease-in-out infinite;
+      }
+      .steam-1 {
+        transform-origin: 275px 170px;
+        animation: steamPuff1 2.8s ease-in-out infinite;
+      }
+      .steam-2 {
+        transform-origin: 288px 165px;
+        animation: steamPuff2 3.4s ease-in-out infinite 0.9s;
+      }
+      .steam-3 {
+        transform-origin: 264px 185px;
+        animation: steamPuff1 2.5s ease-in-out infinite 1.4s;
+      }
+      .baby-momo-companion {
+        transform-origin: 282px 220px;
+        animation: momoJoy 3.8s ease-in-out infinite;
+      }
+      .pull-rope {
+        animation: ropeStretch 3.8s ease-in-out infinite;
+      }
+      .rope-sparkles {
+        animation: sparklePulse 2.4s ease-in-out infinite;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .pulling-character, .steam-1, .steam-2, .steam-3, .baby-momo-companion, .pull-rope, .rope-sparkles {
+          animation: none !important;
+        }
+      }
+    </style>
+
+    <!-- Soft glow filter for cartoon lines on food photo -->
+    <filter id="doodleGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3.5" flood-color="rgba(15,12,10,0.65)" />
+    </filter>
+
+    <!-- Radial gradient for cute rosy cheeks -->
+    <radialGradient id="cheekGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff7b6b" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#ff7b6b" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Warm fill for baby momo dumpling -->
+    <linearGradient id="momoBodyGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fffdf8" />
+      <stop offset="100%" stop-color="#f5e6d0" />
+    </linearGradient>
+
+    <!-- Character shirt gradient -->
+    <linearGradient id="shirtGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f7efe4" />
+    </linearGradient>
+  </defs>
+
+  <g filter="url(#doodleGlow)">
+    <!-- ================= STEAM PUFFS (Animated rising from momo) ================= -->
+    <g class="steam-puffs" stroke="#ffe8c2" stroke-width="2.2" fill="none">
+      <path class="steam-1" d="M 275 195 Q 268 180 276 168 Q 284 156 276 142" stroke-dasharray="2 3" />
+      <path class="steam-2" d="M 288 190 Q 296 176 288 162 Q 280 148 288 135" />
+      <path class="steam-3" d="M 264 200 Q 256 186 262 174" stroke-dasharray="1 3" />
+    </g>
+
+    <!-- ================= THE PULLING ROPE & TENSION ================= -->
+    <g class="rope-sparkles" stroke="#ffd18a" stroke-width="2" fill="none">
+      <path d="M 175 142 L 175 134 M 171 138 L 179 138" />
+      <path d="M 235 188 L 235 182 M 232 185 L 238 185" />
+      <circle cx="210" cy="172" r="1.5" fill="#ffd18a" />
+    </g>
+    
+    <!-- Outer dashed highlight rope -->
+    <path class="pull-rope" d="M 152 148 Q 202 178 270 216" stroke="#ffd18a" stroke-width="3.2" stroke-dasharray="6 3" />
+    <!-- Inner core line -->
+    <path d="M 152 148 Q 202 178 270 216" stroke="#c93427" stroke-width="1.2" opacity="0.85" />
+
+    <!-- ================= THE PULLING CHARACTER ================= -->
+    <g class="pulling-character">
+      
+      <!-- Motion energy dashes behind character -->
+      <g stroke="#ffffff" stroke-width="1.8" opacity="0.45" stroke-linecap="round">
+        <line x1="42" y1="95" x2="26" y2="92" />
+        <line x1="40" y1="112" x2="22" y2="112" />
+        <line x1="46" y1="130" x2="30" y2="134" />
+      </g>
+
+      <!-- Back Leg (Braced backwards) -->
+      <g class="char-leg-back" stroke="#ffffff" stroke-width="3.5">
+        <path d="M 92 165 L 68 198 L 52 226" fill="none" />
+        <!-- Sneaker -->
+        <path d="M 44 228 C 42 222 50 220 58 223 L 74 225 C 78 225 80 231 76 233 L 48 233 C 44 233 43 231 44 228 Z" fill="#29231f" stroke="#ffffff" stroke-width="2.5" />
+        <line x1="46" y1="230" x2="74" y2="230" stroke="#e64a35" stroke-width="2" />
+      </g>
+
+      <!-- Front Leg (Planted firmly forward) -->
+      <g class="char-leg-front" stroke="#ffffff" stroke-width="3.5">
+        <path d="M 104 165 L 118 194 L 110 226" fill="none" />
+        <!-- Sneaker -->
+        <path d="M 102 228 C 100 220 110 219 118 222 L 138 224 C 143 225 144 231 140 234 L 106 234 C 102 234 101 231 102 228 Z" fill="#29231f" stroke="#ffffff" stroke-width="2.5" />
+        <line x1="104" y1="231" x2="138" y2="231" stroke="#e64a35" stroke-width="2" />
+      </g>
+
+      <!-- Torso / Chef Shirt (Leaning back) -->
+      <g class="char-body">
+        <path d="M 88 118 L 118 122 L 108 170 C 105 174 95 174 90 170 Z" fill="url(#shirtGrad)" stroke="#ffffff" stroke-width="3.2" />
+        <!-- Fluttering red neckerchief -->
+        <path d="M 88 118 C 78 114 70 120 64 127 C 71 130 80 126 86 122 Z" fill="#e64a35" stroke="#e64a35" stroke-width="2" />
+        <!-- Apron details -->
+        <line x1="93" y1="126" x2="91" y2="168" stroke="#e8ded1" stroke-width="1.8" />
+        <line x1="113" y1="127" x2="105" y2="168" stroke="#e8ded1" stroke-width="1.8" />
+        <!-- Pocket with chopsticks -->
+        <rect x="94" y="142" width="16" height="15" rx="3" fill="#f6efe5" stroke="#c93427" stroke-width="1.5" />
+        <line x1="97" y1="144" x2="93" y2="135" stroke="#ffd18a" stroke-width="1.8" />
+        <line x1="101" y1="144" x2="98" y2="134" stroke="#ffd18a" stroke-width="1.8" />
+      </g>
+
+      <!-- Back Arm (Holding rope near waist) -->
+      <g class="char-arm-back" stroke="#ffffff" stroke-width="3.2">
+        <path d="M 92 124 L 112 140 L 126 142" fill="none" />
+        <circle cx="128" cy="142" r="5" fill="#ffdfc4" stroke="#ffffff" stroke-width="2" />
+      </g>
+
+      <!-- Head & Momo-Pleated Hat -->
+      <g class="char-head">
+        <!-- Neck -->
+        <line x1="98" y1="114" x2="99" y2="120" stroke="#ffffff" stroke-width="3" />
+        <!-- Face Circle -->
+        <circle cx="102" cy="88" r="23" fill="#fff7ec" stroke="#ffffff" stroke-width="3.2" />
+        <!-- Rosy Cheeks -->
+        <circle cx="88" cy="94" r="5" fill="url(#cheekGlow)" stroke="none" />
+        <circle cx="116" cy="94" r="5" fill="url(#cheekGlow)" stroke="none" />
+        <!-- Happy Eyes -->
+        <path d="M 88 84 Q 92 80 96 84" stroke="#29231f" stroke-width="2.5" fill="none" />
+        <path d="M 108 84 Q 112 80 116 84" stroke="#29231f" stroke-width="2.5" fill="none" />
+        <!-- Button Nose -->
+        <circle cx="102" cy="88" r="1.8" fill="#e64a35" />
+        <!-- Big Joyful Smile -->
+        <path d="M 94 94 Q 102 103 110 94" fill="#c93427" stroke="#29231f" stroke-width="1.8" />
+        <path d="M 98 97 Q 102 101 106 97" fill="#ff998f" stroke="none" />
+
+        <!-- THE MOMO CHEF HAT (Pleated Dumpling Toque) -->
+        <!-- Hat headband -->
+        <path d="M 80 72 C 84 66 120 66 124 72 C 122 75 82 75 80 72 Z" fill="#e64a35" stroke="#ffffff" stroke-width="2.2" />
+        <!-- Dumpling body folds -->
+        <path d="M 81 70 C 74 60 75 42 86 32 C 94 24 110 24 118 32 C 129 42 130 60 123 70 Z" fill="#ffffff" stroke="#ffffff" stroke-width="3" />
+        <!-- Signature pleat lines -->
+        <path d="M 86 44 C 92 50 96 62 96 68" stroke="#e8ded1" stroke-width="2" fill="none" />
+        <path d="M 102 30 C 102 42 102 56 102 68" stroke="#e8ded1" stroke-width="2" fill="none" />
+        <path d="M 118 44 C 112 50 108 62 108 68" stroke="#e8ded1" stroke-width="2" fill="none" />
+        <!-- Dumpling top twist knot -->
+        <path d="M 99 26 Q 102 20 106 25 Q 103 30 99 26 Z" fill="#ffd18a" stroke="#ffffff" stroke-width="1.8" />
+      </g>
+
+      <!-- Front Arm (Reaching forward & pulling down on rope) -->
+      <g class="char-arm-front" stroke="#ffffff" stroke-width="3.5">
+        <path d="M 108 126 L 136 138 L 152 148" fill="none" />
+        <circle cx="152" cy="148" r="6" fill="#ffdfc4" stroke="#ffffff" stroke-width="2.2" />
+        <path d="M 149 144 Q 155 146 153 152" stroke="#29231f" stroke-width="1.6" fill="none" />
+      </g>
+    </g>
+
+    <!-- ================= THE BABY MOMO COMPANION ================= -->
+    <g class="baby-momo-companion" transform="translate(258, 192)">
+      <!-- Soft Shadow -->
+      <ellipse cx="24" cy="46" rx="22" ry="5" fill="rgba(0,0,0,0.35)" />
+      <!-- Dumpling Body -->
+      <path d="M 6 42 C 0 34 3 20 14 14 C 20 10 28 10 34 14 C 45 20 48 34 42 42 C 34 47 14 47 6 42 Z" fill="url(#momoBodyGrad)" stroke="#ffffff" stroke-width="2.8" />
+      <!-- Dumpling Crown Pleats -->
+      <path d="M 15 22 Q 22 28 23 34" stroke="#e0cbb2" stroke-width="1.8" fill="none" stroke-linecap="round" />
+      <path d="M 24 16 Q 24 24 24 34" stroke="#e0cbb2" stroke-width="1.8" fill="none" stroke-linecap="round" />
+      <path d="M 33 22 Q 26 28 25 34" stroke="#e0cbb2" stroke-width="1.8" fill="none" stroke-linecap="round" />
+      <!-- Top Twist Knot -->
+      <ellipse cx="24" cy="13" rx="3.5" ry="2.5" fill="#ffd18a" stroke="#ffffff" stroke-width="1.5" />
+      <!-- Kawaii Eyes -->
+      <path d="M 15 28 Q 18 24 21 28" stroke="#29231f" stroke-width="2" fill="none" />
+      <path d="M 27 28 Q 30 24 33 28" stroke="#29231f" stroke-width="2" fill="none" />
+      <!-- Cheeks -->
+      <circle cx="13" cy="33" r="3.2" fill="#ff7b6b" opacity="0.85" />
+      <circle cx="35" cy="33" r="3.2" fill="#ff7b6b" opacity="0.85" />
+      <!-- Mouth -->
+      <path d="M 21 32 Q 24 37 27 32 Z" fill="#c93427" stroke="#29231f" stroke-width="1.2" />
+      <!-- Red Band / Ribbon tied to rope -->
+      <path d="M 8 40 C 16 44 32 44 40 40" stroke="#e64a35" stroke-width="3" fill="none" stroke-linecap="round" />
+      <circle cx="8" cy="40" r="3" fill="#ffd18a" stroke="#e64a35" stroke-width="1.5" />
+    </g>
+
+  </g>
+</svg>

@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 140" class="puller-svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+  <defs>
+    <style>
+      @keyframes tugMotion {
+        0%, 100% {
+          transform: translate(0px, 0px) rotate(0deg);
+        }
+        50% {
+          transform: translate(-3px, -1.5px) rotate(-2deg);
+        }
+      }
+      @keyframes ropeStrain {
+        0%, 100% {
+          stroke-dashoffset: 0;
+        }
+        50% {
+          stroke-dashoffset: 4;
+        }
+      }
+      @keyframes sweatDrop {
+        0%, 100% {
+          opacity: 0.3;
+          transform: translateY(0) scale(0.9);
+        }
+        50% {
+          opacity: 1;
+          transform: translateY(-2px) scale(1.15);
+        }
+      }
+      .char-group {
+        transform-origin: 52px 135px;
+        animation: tugMotion 3.2s ease-in-out infinite;
+      }
+      .taut-rope {
+        animation: ropeStrain 3.2s ease-in-out infinite;
+      }
+      .effort-sparkle {
+        animation: sweatDrop 2.2s ease-in-out infinite;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .char-group, .taut-rope, .effort-sparkle {
+          animation: none !important;
+        }
+      }
+    </style>
+
+    <filter id="charDropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="rgba(15,12,10,0.6)" />
+    </filter>
+
+    <radialGradient id="cheekBlush" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff7b6b" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#ff7b6b" stop-opacity="0" />
+    </radialGradient>
+
+    <linearGradient id="bodyJacket" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#f5eee3" />
+    </linearGradient>
+  </defs>
+
+  <g filter="url(#charDropShadow)">
+    
+    <!-- Motion lines behind character showing pulling effort -->
+    <g stroke="#ffffff" stroke-width="1.6" opacity="0.4" stroke-linecap="round">
+      <line x1="20" y1="52" x2="10" y2="50" />
+      <line x1="18" y1="65" x2="6" y2="65" />
+      <line x1="22" y1="78" x2="12" y2="81" />
+      <line x1="16" y1="130" x2="4" y2="130" />
+    </g>
+
+    <!-- Sparkle / effort star above hands -->
+    <g class="effort-sparkle" stroke="#ffd18a" stroke-width="1.8" fill="none">
+      <path d="M 98 62 L 98 56 M 95 59 L 101 59" />
+      <circle cx="112" cy="70" r="1.2" fill="#ffd18a" />
+    </g>
+
+    <!-- THE PULLING ROPE (Stretching from hands to right edge) -->
+    <!-- Golden dashed outer rope -->
+    <path class="taut-rope" d="M 78 80 Q 118 86 160 94" stroke="#ffd18a" stroke-width="3.2" stroke-dasharray="5 3" />
+    <!-- Red inner tension core -->
+    <path d="M 78 80 Q 118 86 160 94" stroke="#c93427" stroke-width="1.2" opacity="0.9" />
+
+    <!-- Knot loop at the right edge where rope binds to badge -->
+    <g transform="translate(152, 90)">
+      <ellipse cx="6" cy="4" rx="4" ry="5" fill="none" stroke="#ffd18a" stroke-width="2.5" />
+      <path d="M 3 8 L 8 13 M 7 7 L 11 11" stroke="#e64a35" stroke-width="1.8" />
+    </g>
+
+    <!-- THE CHARACTER (Animated heave-ho pull) -->
+    <g class="char-group">
+      
+      <!-- Back Leg (Left) - Braced back -->
+      <g stroke="#ffffff" stroke-width="3">
+        <path d="M 46 98 L 32 116 L 20 133" fill="none" />
+        <!-- Sneaker -->
+        <path d="M 14 134 C 12 129 18 128 24 130 L 36 131 C 39 131 40 135 37 137 L 16 137 C 14 137 13 135 14 134 Z" fill="#29231f" stroke="#ffffff" stroke-width="2" />
+        <line x1="16" y1="135" x2="36" y2="135" stroke="#e64a35" stroke-width="1.5" />
+      </g>
+
+      <!-- Front Leg (Right) - Planted forward -->
+      <g stroke="#ffffff" stroke-width="3">
+        <path d="M 54 98 L 64 116 L 58 133" fill="none" />
+        <!-- Sneaker -->
+        <path d="M 52 134 C 50 129 56 128 62 130 L 76 131 C 79 131 80 135 77 137 L 54 137 C 52 137 51 135 52 134 Z" fill="#29231f" stroke="#ffffff" stroke-width="2" />
+        <line x1="54" y1="135" x2="76" y2="135" stroke="#e64a35" stroke-width="1.5" />
+      </g>
+
+      <!-- Torso / Jacket (Leaning back ~25 deg) -->
+      <g>
+        <path d="M 42 66 L 64 69 L 56 102 C 54 105 46 105 43 102 Z" fill="url(#bodyJacket)" stroke="#ffffff" stroke-width="2.8" />
+        <!-- Red scarf fluttering behind -->
+        <path d="M 42 66 C 34 63 28 68 23 73 C 28 75 35 72 40 69 Z" fill="#e64a35" stroke="#e64a35" stroke-width="1.5" />
+        <!-- Apron straps -->
+        <line x1="46" y1="72" x2="45" y2="101" stroke="#e8ded1" stroke-width="1.4" />
+        <line x1="60" y1="73" x2="54" y2="101" stroke="#e8ded1" stroke-width="1.4" />
+        <!-- Pocket with mini chopsticks -->
+        <rect x="47" y="83" width="11" height="11" rx="2" fill="#f6efe5" stroke="#c93427" stroke-width="1.2" />
+        <line x1="49" y1="84" x2="46" y2="78" stroke="#ffd18a" stroke-width="1.4" />
+        <line x1="52" y1="84" x2="50" y2="77" stroke="#ffd18a" stroke-width="1.4" />
+      </g>
+
+      <!-- Back Arm (Gripping rope) -->
+      <g stroke="#ffffff" stroke-width="2.6">
+        <path d="M 45 70 L 58 79 L 68 81" fill="none" />
+        <circle cx="70" cy="81" r="3.8" fill="#ffdfc4" stroke="#ffffff" stroke-width="1.8" />
+      </g>
+
+      <!-- Head & Momo-Pleated Chef Hat -->
+      <g>
+        <!-- Neck -->
+        <line x1="50" y1="63" x2="51" y2="67" stroke="#ffffff" stroke-width="2.5" />
+        <!-- Face Circle -->
+        <circle cx="52" cy="45" r="17" fill="#fff7ec" stroke="#ffffff" stroke-width="2.6" />
+        <!-- Rosy Cheeks -->
+        <circle cx="42" cy="49" r="3.8" fill="url(#cheekBlush)" stroke="none" />
+        <circle cx="62" cy="49" r="3.8" fill="url(#cheekBlush)" stroke="none" />
+        <!-- Happy Eyes -->
+        <path d="M 42 41 Q 45 38 48 41" stroke="#29231f" stroke-width="2" fill="none" />
+        <path d="M 56 41 Q 59 38 62 41" stroke="#29231f" stroke-width="2" fill="none" />
+        <!-- Button Nose -->
+        <circle cx="52" cy="44" r="1.4" fill="#e64a35" />
+        <!-- Happy Pulling Smile -->
+        <path d="M 46 49 Q 52 56 58 49" fill="#c93427" stroke="#29231f" stroke-width="1.5" />
+        <path d="M 49 51 Q 52 54 55 51" fill="#ff998f" stroke="none" />
+
+        <!-- THE MOMO CHEF HAT (Dumpling Toque) -->
+        <!-- Red headband -->
+        <path d="M 36 33 C 39 28 65 28 68 33 C 67 35 37 35 36 33 Z" fill="#e64a35" stroke="#ffffff" stroke-width="1.8" />
+        <!-- Dumpling body folds -->
+        <path d="M 37 31 C 32 23 33 10 41 3 C 47 -3 57 -3 63 3 C 71 10 72 23 67 31 Z" fill="#ffffff" stroke="#ffffff" stroke-width="2.4" />
+        <!-- Pleat lines -->
+        <path d="M 41 12 C 45 17 48 25 48 30" stroke="#e8ded1" stroke-width="1.6" fill="none" />
+        <path d="M 52 2 C 52 11 52 21 52 30" stroke="#e8ded1" stroke-width="1.6" fill="none" />
+        <path d="M 63 12 C 59 17 56 25 56 30" stroke="#e8ded1" stroke-width="1.6" fill="none" />
+        <!-- Top twist knot -->
+        <ellipse cx="52" cy="0" rx="3" ry="2" fill="#ffd18a" stroke="#ffffff" stroke-width="1.4" />
+      </g>
+
+      <!-- Front Arm (Gripping rope tightly) -->
+      <g stroke="#ffffff" stroke-width="2.8">
+        <path d="M 56 71 L 70 78 L 80 81" fill="none" />
+        <!-- Hand / Fist -->
+        <circle cx="80" cy="81" r="4.5" fill="#ffdfc4" stroke="#ffffff" stroke-width="1.8" />
+        <path d="M 77 78 Q 82 80 81 84" stroke="#29231f" stroke-width="1.3" fill="none" />
+      </g>
+    </g>
+
+  </g>
+</svg>
