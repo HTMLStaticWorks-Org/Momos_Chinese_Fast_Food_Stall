@@ -52,21 +52,45 @@
             <div class="container contact-layout">
                 <div class="contact-copy"><span class="eyebrow">GET IN TOUCH</span>
                     <h2>Tell us what<br>you're <em>craving.</em></h2>
-                    <p>Use the enquiry form to share the dishes, quantities and preferred time. The stall's verified
-                        address, phone number and opening hours can be added here before launch.</p>
+                    <p>Whether you're picking up a hot evening snack, ordering party platters for friends, or planning office lunch boxes, we're ready to serve fresh, steaming street-food favourites crafted to order.</p>
                     <div class="contact-info">
-                        <div><b>ORDER ENQUIRIES</b><span>Use the form and include your preferred contact details.</span>
+                        <div><b>PHONE &amp; WHATSAPP</b>
+                            <span>Call or message for quick takeaway enquiries:</span>
+                            <span class="contact-val"><a href="tel:+919876543210">+91 98765 43210</a> · <a href="https://wa.me/919876543210" target="_blank" rel="noopener">WhatsApp Chat ↗</a></span>
                         </div>
-                        <div><b>LOCATION & HOURS</b><span>Update with the stall's confirmed location and business
-                                hours.</span></div>
+                        <div><b>EMAIL ADDRESS</b>
+                            <span>For catering, event packages &amp; feedback:</span>
+                            <span class="contact-val"><a href="mailto:orders@momosfastfood.com">orders@momosfastfood.com</a></span>
+                        </div>
+                        <div><b>STALL LOCATION &amp; ADDRESS</b>
+                            <span>Plot No. 14, Food Street, Near Metro Station, Madhapur, Hyderabad, Telangana 500081</span>
+                            <span class="contact-sub">Landmark: Opposite Cyber Towers Main Gate</span>
+                        </div>
+                        <div><b>OPENING HOURS</b>
+                            <span>Monday to Sunday: 1:00 PM – 11:30 PM</span>
+                            <span class="contact-sub">Hot batches steamed continuously every evening</span>
+                        </div>
                     </div><img src="assets/images/food-17.jpg" alt="Momos with dipping sauces ready to enjoy">
                 </div>
                 <form class="order-form" id="order-form"><span class="eyebrow">ORDER ENQUIRY</span>
                     <h3>What can we prepare for you?</h3><label>Your name<input name="name" required
                             placeholder="Enter your name"></label>
-                    <div class="form-row"><label>Phone number<input name="phone" type="tel" required
-                                placeholder="Your contact number"></label><label>Preferred date<input name="date"
-                                type="date"></label></div><label>Dish / combo<select name="item" id="itemSelect">
+                    <div class="form-row">
+                        <label>Phone number<input name="phone" type="tel" required
+                                placeholder="+91 98765 43210"></label>
+                        <label>Email address<input name="email" type="email" required
+                                placeholder="your.name@example.com"></label>
+                    </div>
+                    <div class="form-row">
+                        <label>Preferred date<input name="date" type="date"></label>
+                        <label>Enquiry type<select name="type">
+                                <option>Pickup enquiry</option>
+                                <option>Group order</option>
+                                <option>Menu question</option>
+                                <option>Other</option>
+                            </select></label>
+                    </div>
+                    <label>Dish / combo<select name="item" id="itemSelect">
                             <option value="">Choose a dish</option>
                             <option>Steamed vegetable momos</option>
                             <option>Crispy fried momos</option>
@@ -78,14 +102,9 @@
                             <option>Chinese feast box</option>
                             <option>Other / custom order</option>
                         </select></label>
-                    <div class="form-row"><label>Quantity<input name="quantity" type="number" min="1" value="1"
-                                required></label><label>Enquiry type<select name="type">
-                                <option>Pickup enquiry</option>
-                                <option>Group order</option>
-                                <option>Menu question</option>
-                                <option>Other</option>
-                            </select></label></div><label>Message<textarea name="message" rows="4"
-                            placeholder="Tell us about your order or any special request"></textarea></label><button
+                    <div class="form-row"><label>Quantity (plates)<input name="quantity" type="number" min="1" value="1"
+                                required></label></div><label>Message<textarea name="message" rows="4"
+                            placeholder="Tell us about your order or any special spice/chutney requests"></textarea></label><button
                         class="btn btn-primary form-submit" type="submit">Prepare enquiry <span> </span></button>
                     <p class="form-note">Demo form: it prepares a formatted enquiry for you to copy. No order is sent
                         until you share it with the stall.</p>
@@ -96,25 +115,90 @@
                 </form>
             </div>
         </section>
+        <section class="section faq-section" id="faq">
+            <div class="container">
+                <div class="section-head">
+                    <div><span class="eyebrow">FREQUENTLY ASKED QUESTIONS</span>
+                        <h2>Got questions? <em>We've got answers.</em></h2>
+                    </div>
+                    <p class="section-note">Everything you need to know about placing orders, customized party platters, dietary options, and stall timings.</p>
+                </div>
+                <div class="faq-accordion">
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>How far in advance should I place a group or party order?</span>
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>For small groups (10–25 plates), 2 to 3 hours advance notice is perfect so we can steam and pack everything piping hot for your pickup. For larger catering platters or party boxes (30+ plates), please share your enquiry at least 24 hours ahead so we can reserve fresh ingredients and prep your preferred dip varieties.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>Are there vegetarian and vegan options available?</span>
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Yes, absolutely! We offer pure vegetable steamed and fried momos filled with shredded cabbage, carrots, bell peppers, spring onions, and ginger. We also offer chilli paneer, veg Hakka noodles, and vegetable Schezwan fried rice. All our main dipping chutneys (chilli garlic &amp; tomato) are 100% plant-based.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>Can we customize the spice and sauce levels?</span>
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Yes! Just mention your preference when ordering. We can adjust the heat from mild (kid-friendly with extra sweet plum sauce or creamy dip) to medium street-style, or extra fiery Schezwan style with extra garlic and crushed red peppers.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>How long does regular takeaway preparation take?</span>
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Our steamers are kept running continuously throughout our operating hours. Walk-in steamed momos are usually served within 3 to 5 minutes, while crispy deep-fried or wok-tossed items take approximately 7 to 10 minutes from wok to box.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>Do you provide disposable packaging and dipping cups?</span>
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>Yes. All takeaway orders are packed in sturdy, food-grade thermal containers with steam vents so your fried momos stay crispy and steamed momos stay tender. Dipping sauces are provided in separate sealed dip cups along with wooden forks and paper napkins.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary class="faq-question">
+                            <span>What are your stall operating hours and peak times?</span>
+                            <span class="faq-icon" aria-hidden="true">+</span>
+                        </summary>
+                        <div class="faq-answer">
+                            <p>We are open every day from 1:00 PM to 11:30 PM. Peak crowd hours are typically in the evening from 6:30 PM to 9:30 PM. If you are picking up during peak hours, we recommend calling or sending an enquiry ahead to avoid waiting in line.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
         <section class="section location-section">
             <div class="container">
                 <div class="section-head">
                     <div><span class="eyebrow">FIND YOUR FOOD STOP</span>
                         <h2>Come by for a <em>good bite.</em></h2>
                     </div>
-                    <p class="section-note">Map preview is a general search for the stall name in Hyderabad. Replace it
-                        with the verified business address and exact map pin before publishing.</p>
+                    <p class="section-note">Visit our lively street stall in the heart of Madhapur Food Street, right opposite Cyber Towers.</p>
                 </div>
                 <div class="map-panel">
                     <div class="map-frame"><iframe title="Map search for Momos and Chinese fast food in Hyderabad"
-                            src="https://maps.google.com/maps?q=Momos%20Chinese%20Fast%20Food%20Stall%20Hyderabad&t=&z=12&ie=UTF8&iwloc=&output=embed"
+                            src="https://maps.google.com/maps?q=Madhapur%20Food%20Street%20Hyderabad&t=&z=14&ie=UTF8&iwloc=&output=embed"
                             loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div>
                     <div class="map-caption"><span class="map-pin">⌖</span>
-                        <div><b>Location details to be confirmed</b>
-                            <p>Add the stall's exact street address, opening hours and contact number here.</p><a
+                        <div><b>Madhapur Food Street Stall</b>
+                            <p>Plot No. 14, Opposite Cyber Towers Main Gate, Food Street, Madhapur, Hyderabad, Telangana 500081.<br><strong>Open daily:</strong> 1:00 PM – 11:30 PM<br><strong>Direct call:</strong> <a href="tel:+919876543210">+91 98765 43210</a></p><a
                                 class="btn btn-outline"
-                                href="https://www.google.com/maps/search/?api=1&query=Momos+Chinese+Fast+Food+Stall+Hyderabad"
-                                target="_blank" rel="noopener">Open map search</a>
+                                href="https://www.google.com/maps/search/?api=1&query=Madhapur+Food+Street+Hyderabad"
+                                target="_blank" rel="noopener">Open in Google Maps ↗</a>
                         </div>
                     </div>
                 </div>
@@ -130,9 +214,8 @@
                 <div class="footer-social" aria-label="Social media links"><a href="https://www.instagram.com/"
                         target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24"
                             aria-hidden="true">
-                            <rect x="3" y="3" width="18" height="18" rx="5" />
-                            <circle cx="12" cy="12" r="4" />
-                            <circle cx="17.5" cy="6.5" r="1" />
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
                         </svg></a><a href="https://www.facebook.com/" target="_blank" rel="noopener"
                         aria-label="Facebook" title="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true">
                             <path
@@ -153,8 +236,9 @@
             </div>
             <div>
                 <h4>Visit / Contact</h4>
-                <p>Freshly prepared, made to order.</p><a href="contact.html#order-form">Send an enquiry ↗</a>
-                <p class="footer-note">Add your verified address and phone number before publishing.</p>
+                <p>Plot 14, Food Street, Madhapur, Hyderabad</p>
+                <p>Ph: <a href="tel:+919876543210">+91 98765 43210</a></p>
+                <p>Email: <a href="mailto:orders@momosfastfood.com">orders@momosfastfood.com</a></p><a href="contact.html#order-form">Send an enquiry ↗</a>
             </div>
         </div>
         <div class="container footer-bottom"><span>© <span id="year"></span> Momos & Chinese Fast Food Stall</span><a

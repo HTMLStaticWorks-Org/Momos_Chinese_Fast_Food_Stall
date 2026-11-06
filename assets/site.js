@@ -23,7 +23,7 @@ $$('.filter-btn').forEach(btn=>btn.addEventListener('click',()=>{const val=btn.d
 const form=$('#order-form');
 if(form){
  const params=new URLSearchParams(location.search);const pre=params.get('item');if(pre&&$('#itemSelect')){$('#itemSelect').value=pre}
- form.addEventListener('submit',e=>{e.preventDefault();if(!form.reportValidity())return;const d=Object.fromEntries(new FormData(form).entries());const msg=`MOMOS & CHINESE FAST FOOD — ORDER ENQUIRY\nName: ${d.name}\nPhone: ${d.phone}\nPreferred date: ${d.date||'Not specified'}\nDish / combo: ${d.item||'Not specified'}\nQuantity: ${d.quantity}\nEnquiry type: ${d.type}\nMessage: ${d.message||'—'}`;$('#enquiryOutput').value=msg;$('#formResult').hidden=false;$('#formResult').scrollIntoView({behavior:'smooth',block:'nearest'});});
+ form.addEventListener('submit',e=>{e.preventDefault();if(!form.reportValidity())return;const d=Object.fromEntries(new FormData(form).entries());const msg=`MOMOS & CHINESE FAST FOOD — ORDER ENQUIRY\nName: ${d.name}\nPhone: ${d.phone}\nEmail: ${d.email||'Not provided'}\nPreferred date: ${d.date||'Not specified'}\nDish / combo: ${d.item||'Not specified'}\nQuantity: ${d.quantity} plates\nEnquiry type: ${d.type}\nMessage: ${d.message||'—'}`;$('#enquiryOutput').value=msg;$('#formResult').hidden=false;$('#formResult').scrollIntoView({behavior:'smooth',block:'nearest'});});
  $('#copyEnquiry')?.addEventListener('click',async()=>{try{await navigator.clipboard.writeText($('#enquiryOutput').value);$('#copyStatus').textContent='Copied. Share this enquiry with the stall.'}catch(e){$('#enquiryOutput').select();document.execCommand('copy');$('#copyStatus').textContent='Select and copy the enquiry text.'}});
 }
 })();
